@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html style="height: 100vh;">
+    <head>
+        <title>BC Wildfires</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body style="margin: 0; min-height: 100vh;">
+        <div class="column">
+            <h1 style="text-align: center; margin-bottom: 0;">BC Wildfires</h1>
+            <div style="text-align: center;">
+                <p style="padding: 0; margin-top: 0;">August 31, 2025</p>
+                <p style="padding-top: 0; margin-top: 0;">Mara Solen</p>
+            </div>
+            <p>
+                One part of living in British Columbia that has become commonplace is the wildfires that occur
+                every summer. Nowadays, I expect to see smoke on the horizon or even above Vancouver for part or
+                even most of the summer, and I expect to hear of dangerous fires threatening communities on
+                Vancouver Island and in the interior. The first year I remember this happening was 2015, when I 
+                returned from my exchange to Norway. I had heard that the fires were bad, but when I arrived in
+                BC I saw smoke filling the sky and there was an orange glow everywhere. People were calling it 
+                apocalyptic. Another year, my cousin had to evacuate from Fort St. John due to a fire that was
+                threatening the town, and she had to move back to the Nanaimo area for a while. The fire that I 
+                remember off the top of my head from this year was near Port Alberni, a place I have driven 
+                through many times throughout my life.
+            </p>
+            <div class="row">
+                <img src="images/vancouver-smoke-sky.jpg" style="border-radius: 1em;">
+                <img src="images/mount-underwood-fire.avif" style="border-radius: 1em;">
+            </div>
+            <p class="caption" style="text-align: center;">
+                Left: an almost apocalyptic Vancouver due to smoke from nearby fires. Right: the Mount Underwood
+                fire that threatened Port Alberni this year and knocked out power for many communities on the 
+                west side of Vancouver Island, including Bamfield, for 11 days.
+            </p>
+            <p>
+                As a kid, the main reason I would be heading through that area was to go to Sprout Lake to stay with
+                my friend. While I can remember multiple Port Alberni fires from the last few years, I can't
+                remember that every being an issue when I was younger. This got me thinking about how wildfires
+                seemed to be a much more manageable when I was a kid than they are now, but I was wondering if 
+                I just had less access or interest in wildfire news then, or if wildfires really have gotten
+                worse. The map below shows wildfire areas in BC from the year I was born until 2024, with more 
+                recent fires shown in warmer colours like red, orange, and yellow, and fires from longer ago in 
+                cooler colours like blue.
+            </p>
+        </div>
+
+        <div id="map-visualization-container" class="visualization-container" first-render="true">
+            <svg id="map-visualization" class="visualization"></svg>
+        </div>
+
+        <div class="column">
+            <p>
+                Looking at this map, I notice that almost all of the colours I can see are warmer, meaning that 
+                most of the fires are from recent years. In particular, I see the huge red fire in the northeast
+                corner and the huge orange one in gentral BC. This indicates that my perception is true: bigger 
+                fires are becoming more common over time. However, there are also many small fires that are very 
+                hard to see, and it's hard to tell when those fires happened. 
+            </p>
+            <p>
+                To look at changes in overall fire count and cumulative fire size over my lifetime, I made
+                a filled area chart with wildfire count by year on top and cumulative wildfire size on the bottom.
+            </p>
+        </div>
+
+        <div id="temporal-visualization-container" class="visualization-container" first-render="true">
+            <svg id="temporal-visualization" class="visualization"></svg>
+        </div>
+
+        <div class="column">
+            <p>
+                This chart clearly shows the increase over time. While peak years in terms of fire count (such as 
+                2009, 2018, and 2023) are mostly consistent, the average nuimber of fires appears to be increasing.
+                Even more salient is the increase in cumulative wildfire size, with larger amounts in 2017, 2018,
+                and 2021 and a huge spike in 2023.
+            </p>
+            <div class="row">
+                <img src="images/water-bomber.jpg" style="border-radius: 1em;">
+                <img src="images/fire-copter.webp" style="border-radius: 1em;">
+            </div>
+            <p class="caption" style="text-align: center;">
+                Two aircraft used to carry water to put out fires. Left: the Martin JRM Mars water bomber that I
+                grew up seeing when I visited my friends at Sproat Lake, where it was based. It operated for over
+                50 years. Right: a helicopter deploying water from a water bucket.
+            </p>
+            <p>
+                So, it seems that fires are becoming more of a problem in BC, which lines up with my reflections.
+                It also aligns with climate change models that show changing temperatures and more erratic weather.
+                Obviously, local news has reported on this topic too, but I rarely see these kinds of charts, 
+                especially the geographic map showing fire perimeters with when they happened. I will also note
+                that the data could be missing fires or otherwise be inaccurate, but I downloaded it from the BC
+                government website so it's likely the most accurate data that's available to the public. 
+            </p>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
